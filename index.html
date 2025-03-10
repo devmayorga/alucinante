@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Impresionante</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .bubble {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 255, 0.5);
+      border-radius: 50%;
+      animation: moveBubble 5s infinite;
+    }
+
+    @keyframes moveBubble {
+      0% { top: 90%; left: 10%; }
+      50% { top: 10%; left: 50%; }
+      100% { top: 90%; left: 90%; }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .control-buttons {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Bienvenido a mi página impresionante!</h1>
+  <div class="bubble" id="bubble"></div>
+
+  <div class="control-buttons">
+    <button onclick="toggleBubble()">Activar/Desactivar Burbuja</button>
+  </div>
+
+  <script>
+    function toggleBubble() {
+      const bubble = document.getElementById('bubble');
+      bubble.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
